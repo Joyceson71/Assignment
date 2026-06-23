@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE Department - Kings Engineering College</title>
+    <meta name="description" content="Computer Science & Engineering Department at Kings Engineering College — Shaping tomorrow's technology leaders through world-class education and research.">
+    <title>CSE Department — Kings Engineering College</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <!-- Background Audio (Autoplay with controls) -->
-    <audio id="bgMusic" autoplay loop style="display: none;">
+
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop style="display:none;">
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
     </audio>
 
-    <!-- Navigation Bar -->
+    <!-- ══════════════ NAVBAR ══════════════ -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
+
                 <div class="logo-section">
                     <div class="department-logo">
                         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
                             <defs>
                                 <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#0099ff;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#6a28d9;stop-opacity:1" />
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:0.8" />
                                 </linearGradient>
                             </defs>
-                            <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoGrad)" stroke-width="2"/>
-                            <text x="50" y="55" font-size="20" font-weight="bold" text-anchor="middle" fill="url(#logoGrad)" font-family="monospace">CSE</text>
+                            <text x="50" y="62" font-size="36" font-weight="900" text-anchor="middle"
+                                  fill="url(#logoGrad)" font-family="monospace">CSE</text>
                         </svg>
                     </div>
                     <div class="nav-title">
@@ -35,244 +39,435 @@
                         <p>Kings Engineering College</p>
                     </div>
                 </div>
+
                 <ul class="nav-menu">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#faculty">Faculty</a></li>
-                    <li><a href="#media">Media</a></li>
+                    <li><a href="#home" class="active" id="nav-home">Home</a></li>
+                    <li><a href="#about" id="nav-about">About</a></li>
+                    <li><a href="#programs" id="nav-programs">Programs</a></li>
+                    <li><a href="#faculty" id="nav-faculty">Faculty</a></li>
+                    <li><a href="#media" id="nav-media" class="nav-cta">Media</a></li>
                 </ul>
+
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Department Image -->
+    <!-- ══════════════ HERO ══════════════ -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 style="color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 4px 20px rgba(0, 0, 0, 0.5); font-size: 3.5em; font-weight: 900; letter-spacing: -1px; margin: 0;">
-                    COMPUTER SCIENCE
-                </h1>
-                <h2 style="color: #a855f7; text-shadow: 0 0 15px rgba(168, 85, 247, 0.7), 0 3px 15px rgba(0, 0, 0, 0.5); font-size: 2.5em; font-weight: 700; margin: 10px 0;">
-                    & ENGINEERING
-                </h2>
-                <p style="color: #e0e7ff; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); font-size: 1.2em; line-height: 1.6; margin-top: 20px;">
-                    Innovating Tomorrow's Technology Leaders
-                </p>
-            </div>
-            <div class="hero-image">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230099ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%236a28d9;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='%231a1a2e' opacity='0.3'/%3E%3Ccircle cx='200' cy='80' r='50' fill='url(%23grad)' opacity='0.8'/%3E%3Crect x='80' y='150' width='240' height='120' fill='none' stroke='url(%23grad)' stroke-width='3' rx='10' opacity='0.8'/%3E%3Cline x1='140' y1='165' x2='260' y2='165' stroke='%230099ff' stroke-width='2' opacity='0.6'/%3E%3Cline x1='140' y1='200' x2='260' y2='200' stroke='%236a28d9' stroke-width='2' opacity='0.6'/%3E%3Cline x1='140' y1='235' x2='260' y2='235' stroke='%230099ff' stroke-width='2' opacity='0.6'/%3E%3C/svg%3E" alt="CSE Department" class="hero-img">
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about">
+        <!-- Background video -->
+        <video autoplay loop muted playsinline class="back-video">
+            <source src="assets/college.mp4" type="video/mp4">
+        </video>
+
         <div class="container">
-            <h2 style="color: #00d4ff; text-shadow: 0 0 15px rgba(0, 212, 255, 0.6); text-align: center; margin-bottom: 30px;">About CSE Department</h2>
-            <p>
-                The Computer Science and Engineering Department is dedicated to providing world-class education in the field of computing. 
-                Our curriculum is designed to equip students with both theoretical knowledge and practical skills required to excel in the rapidly evolving field of technology.
-            </p>
-        </div>
-    </section>
+            <div class="hero-content">
 
-    <!-- Programs Offered -->
-    <section class="programs" id="programs">
-        <div class="container">
-            <h2 style="color: #a855f7; text-shadow: 0 0 15px rgba(168, 85, 247, 0.6); margin-bottom: 30px;">Programs Offered</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <h3>B.Tech CSE</h3>
-                    <ul class="program-list">
-                        <li>4-Year Full-Time Program</li>
-                        <li>120+ Credits</li>
-                        <li>Internship Opportunities</li>
-                        <li>Industry Collaboration</li>
-                        <li>Research Focus</li>
-                    </ul>
-                </div>
-                <div class="program-card">
-                    <h3>M.Tech CSE</h3>
-                    <ul class="program-list">
-                        <li>2-Year Advanced Program</li>
-                        <li>80+ Credits</li>
-                        <li>Specialization Options</li>
-                        <li>Advanced Research</li>
-                        <li>Industry Projects</li>
-                    </ul>
-                </div>
-                <div class="program-card">
-                    <h3>Specializations</h3>
-                    <ul class="program-list">
-                        <li>Artificial Intelligence & ML</li>
-                        <li>Cybersecurity & AppSec</li>
-                        <li>Cloud Computing</li>
-                        <li>Full-Stack Development</li>
-                        <li>Data Science</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+                <!-- Left: Text -->
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        Ranked #1 in Tamil Nadu 2024
+                    </div>
 
-    <!-- Media Section -->
-    <section class="media-section" id="media">
-        <div class="container">
-            <h2 style="color: #00d4ff; text-shadow: 0 0 15px rgba(0, 212, 255, 0.6); margin-bottom: 30px;">Department Introduction</h2>
-            
-            <!-- Video Section -->
-            <div class="media-container">
-                <div class="video-container">
-                    <h3>Department Video Introduction</h3>
-                    <video width="100%" height="auto" controls style="border-radius: 10px; box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);">
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                    <h1>
+                        <span class="gradient-word">Computer</span><br>
+                        Science &amp;<br>Engineering
+                    </h1>
 
-                <!-- Audio Control Section -->
-                <div class="audio-control-container">
-                    <h3>Background Music Control</h3>
-                    <div class="audio-controls">
-                        <div class="music-info">
-                            <span class="music-icon">🎵</span>
-                            <span class="music-title">Department Background Music</span>
+                    <h2>Kings Engineering College</h2>
+
+                    <p>
+                        Shaping tomorrow's technology leaders through cutting-edge research,
+                        industry partnerships, and a world-class curriculum designed for the AI era.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#programs" class="btn btn-primary" id="hero-explore-btn">
+                            Explore Programs
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#faculty" class="btn btn-outline" id="hero-faculty-btn">
+                            Meet Faculty
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Students</div>
                         </div>
-                        <div class="audio-player">
-                            <button onclick="toggleMusic()" class="control-btn play-btn" id="playBtn">
-                                <span>▶ Play</span>
-                            </button>
-                            <button onclick="stopMusic()" class="control-btn stop-btn">
-                                <span>⏹ Stop</span>
-                            </button>
-                            <input type="range" min="0" max="100" value="50" onchange="setVolume(this.value)" class="volume-slider">
-                            <span class="volume-label" id="volumeLabel">50%</span>
+                        <div class="stat-item">
+                            <div class="stat-number">40+</div>
+                            <div class="stat-label">Faculty</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Placement</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Years</div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Right: Visual card -->
+                <div class="hero-image">
+                    <div class="hero-img-wrap">
+                        <div class="hero-img-card">
+                            <img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 320'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230ea5e9'/%3E%3Cstop offset='50%25' style='stop-color:%238b5cf6'/%3E%3Cstop offset='100%25' style='stop-color:%23ec4899'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%230ea5e9;stop-opacity:0.3'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:0.3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='420' height='320' fill='%23050811'/%3E%3Ccircle cx='210' cy='90' r='60' fill='none' stroke='url(%23g1)' stroke-width='2' opacity='0.8'/%3E%3Ccircle cx='210' cy='90' r='40' fill='url(%23g1)' opacity='0.15'/%3E%3Ctext x='210' y='100' font-size='32' font-weight='900' text-anchor='middle' fill='url(%23g1)' font-family='monospace'%3ECSE%3C/text%3E%3Crect x='40' y='180' width='340' height='110' fill='url(%23g2)' rx='12'/%3E%3Crect x='40' y='180' width='340' height='110' fill='none' stroke='url(%23g1)' stroke-width='1.5' rx='12' opacity='0.5'/%3E%3Cline x1='70' y1='210' x2='260' y2='210' stroke='%230ea5e9' stroke-width='2' opacity='0.7' stroke-linecap='round'/%3E%3Cline x1='70' y1='235' x2='220' y2='235' stroke='%238b5cf6' stroke-width='2' opacity='0.7' stroke-linecap='round'/%3E%3Cline x1='70' y1='260' x2='190' y2='260' stroke='%23ec4899' stroke-width='2' opacity='0.7' stroke-linecap='round'/%3E%3Ccircle cx='370' cy='210' r='12' fill='%230ea5e9' opacity='0.8'/%3E%3Ccircle cx='370' cy='235' r='12' fill='%238b5cf6' opacity='0.8'/%3E%3Ccircle cx='370' cy='260' r='12' fill='%23ec4899' opacity='0.8'/%3E%3C/svg%3E"
+                                alt="CSE Department Illustration"
+                                class="hero-img"
+                            >
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Faculty Section -->
-    <section class="faculty-section" id="faculty">
+    <div class="section-divider"></div>
+
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section class="about" id="about">
         <div class="container">
-            <h2 style="color: #a855f7; text-shadow: 0 0 15px rgba(168, 85, 247, 0.6); margin-bottom: 30px;">Faculty Details</h2>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Faculty ID</th>
-                        <th>Name</th>
-                        <th>Designation</th>
-                        <th>Specialization</th>
-                        <th>Qualifications</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CSE001</td>
-                        <td>Dr. Rajesh Kumar</td>
-                        <td>Professor</td>
-                        <td>Artificial Intelligence</td>
-                        <td>PhD (IIT Delhi)</td>
-                        <td>rajesh.kumar@kec.edu</td>
-                    </tr>
-                    <tr>
-                        <td>CSE002</td>
-                        <td>Ms. Priya Sharma</td>
-                        <td>Associate Professor</td>
-                        <td>Database Systems</td>
-                        <td>M.Tech (NIT Trichy)</td>
-                        <td>priya.sharma@kec.edu</td>
-                    </tr>
-                    <tr>
-                        <td>CSE003</td>
-                        <td>Dr. Vikram Singh</td>
-                        <td>Assistant Professor</td>
-                        <td>Cybersecurity</td>
-                        <td>PhD (IIT Madras)</td>
-                        <td>vikram.singh@kec.edu</td>
-                    </tr>
-                    <tr>
-                        <td>CSE004</td>
-                        <td>Mr. Arun Patel</td>
-                        <td>Assistant Professor</td>
-                        <td>Web Development</td>
-                        <td>M.Tech (BITS Pilani)</td>
-                        <td>arun.patel@kec.edu</td>
-                    </tr>
-                    <tr>
-                        <td>CSE005</td>
-                        <td>Dr. Sneha Verma</td>
-                        <td>Associate Professor</td>
-                        <td>Machine Learning</td>
-                        <td>PhD (IIT Bombay)</td>
-                        <td>sneha.verma@kec.edu</td>
-                    </tr>
-                    <tr>
-                        <td>CSE006</td>
-                        <td>Mr. Nikhil Desai</td>
-                        <td>Assistant Professor</td>
-                        <td>Cloud Computing</td>
-                        <td>M.Tech (Anna University)</td>
-                        <td>nikhil.desai@kec.edu</td>
-                    </tr>
-                    <tr>
-                        <td>CSE007</td>
-                        <td>Ms. Deepali Nair</td>
-                        <td>Lecturer</td>
-                        <td>Data Analytics</td>
-                        <td>B.Tech (VIT)</td>
-                        <td>deepali.nair@kec.edu</td>
-                    </tr>
-                    <tr>
-                        <td>CSE008</td>
-                        <td>Dr. Arjun Mishra</td>
-                        <td>Professor</td>
-                        <td>Software Engineering</td>
-                        <td>PhD (IIT Kharagpur)</td>
-                        <td>arjun.mishra@kec.edu</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="about-inner">
+
+                <!-- Left: Cards visual -->
+                <div class="about-visual reveal">
+                    <div class="about-card">
+                        <div class="about-card-icon">🏆</div>
+                        <div class="about-card-title">Excellence in Education</div>
+                        <div class="about-card-text">
+                            NAAC 'A+' accredited institution with globally recognized programs in Computer Science and Engineering.
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🔬</div>
+                        <div class="about-card-title">Research First</div>
+                        <div class="about-card-text">Active research labs in AI, ML, Cybersecurity and Cloud Computing.</div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🤝</div>
+                        <div class="about-card-title">Industry Ties</div>
+                        <div class="about-card-text">MoUs with 50+ companies including TCS, Infosys, Wipro and Google.</div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🌐</div>
+                        <div class="about-card-title">Global Network</div>
+                        <div class="about-card-text">Alumni placed across 20+ countries in top tech roles worldwide.</div>
+                    </div>
+                </div>
+
+                <!-- Right: Text -->
+                <div class="reveal" style="transition-delay:0.15s">
+                    <div class="section-label">About Us</div>
+                    <h2 class="section-title">Forging the Engineers of Tomorrow</h2>
+                    <p>
+                        The Computer Science and Engineering Department at Kings Engineering College is
+                        dedicated to delivering world-class technical education rooted in innovation,
+                        integrity and industry relevance.
+                    </p>
+                    <p>
+                        Our curriculum blends rigorous theory with hands-on laboratory practice,
+                        collaborative projects and live industry internships — equipping graduates
+                        to lead in a rapidly evolving technology landscape.
+                    </p>
+                    <a href="#programs" class="btn btn-primary" id="about-programs-btn" style="margin-top:8px;">
+                        View Programs
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <div class="section-divider"></div>
+
+    <!-- ══════════════ PROGRAMS ══════════════ -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="programs-header reveal">
+                <div class="section-label">What We Offer</div>
+                <h2 class="section-title">Our Programs</h2>
+                <p class="section-sub">
+                    Choose from undergraduate to postgraduate pathways, each designed
+                    with an industry-aligned curriculum and expert faculty mentorship.
+                </p>
+            </div>
+
+            <div class="programs-grid">
+
+                <div class="program-card reveal" style="transition-delay:0.1s">
+                    <div class="program-card-icon">🎓</div>
+                    <h3>B.Tech — CSE</h3>
+                    <p>Four-year flagship undergraduate program in Computer Science & Engineering.</p>
+                    <ul class="program-list">
+                        <li>4-Year Full-Time Program</li>
+                        <li>120+ Credits Curriculum</li>
+                        <li>Mandatory Industry Internship</li>
+                        <li>Industry Collaboration Projects</li>
+                        <li>Strong Research Component</li>
+                    </ul>
+                </div>
+
+                <div class="program-card reveal" style="transition-delay:0.2s">
+                    <div class="program-card-icon">🚀</div>
+                    <h3>M.Tech — CSE</h3>
+                    <p>Advanced two-year postgraduate program with deep specialisation tracks.</p>
+                    <ul class="program-list">
+                        <li>2-Year Advanced Program</li>
+                        <li>80+ Credits</li>
+                        <li>Specialisation Electives</li>
+                        <li>Advanced Research Labs</li>
+                        <li>Live Industry Projects</li>
+                    </ul>
+                </div>
+
+                <div class="program-card reveal" style="transition-delay:0.3s">
+                    <div class="program-card-icon">⚡</div>
+                    <h3>Specialisations</h3>
+                    <p>Emerging tech tracks embedded within both UG and PG programs.</p>
+                    <ul class="program-list">
+                        <li>Artificial Intelligence &amp; ML</li>
+                        <li>Cybersecurity &amp; AppSec</li>
+                        <li>Cloud Computing &amp; DevOps</li>
+                        <li>Full-Stack Development</li>
+                        <li>Data Science &amp; Analytics</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════ FACULTY ══════════════ -->
+    <section class="faculty-section" id="faculty">
+        <div class="container">
+            <div class="faculty-header reveal">
+                <div class="section-label">Our People</div>
+                <h2 class="section-title">Faculty Details</h2>
+                <p class="section-sub">
+                    World-class academics with research expertise from India's premier institutions
+                    and global industry experience.
+                </p>
+            </div>
+
+            <div class="table-wrap reveal" style="transition-delay:0.15s">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Faculty ID</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Specialisation</th>
+                            <th>Qualification</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CSE001</td>
+                            <td>Dr. Rajesh Kumar</td>
+                            <td>Professor</td>
+                            <td>Artificial Intelligence</td>
+                            <td>PhD — IIT Delhi</td>
+                            <td><a href="mailto:rajesh.kumar@kec.edu">rajesh.kumar@kec.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>CSE002</td>
+                            <td>Ms. Priya Sharma</td>
+                            <td>Associate Professor</td>
+                            <td>Database Systems</td>
+                            <td>M.Tech — NIT Trichy</td>
+                            <td><a href="mailto:priya.sharma@kec.edu">priya.sharma@kec.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>CSE003</td>
+                            <td>Dr. Vikram Singh</td>
+                            <td>Assistant Professor</td>
+                            <td>Cybersecurity</td>
+                            <td>PhD — IIT Madras</td>
+                            <td><a href="mailto:vikram.singh@kec.edu">vikram.singh@kec.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>CSE004</td>
+                            <td>Mr. Arun Patel</td>
+                            <td>Assistant Professor</td>
+                            <td>Web Development</td>
+                            <td>M.Tech — BITS Pilani</td>
+                            <td><a href="mailto:arun.patel@kec.edu">arun.patel@kec.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>CSE005</td>
+                            <td>Dr. Sneha Verma</td>
+                            <td>Associate Professor</td>
+                            <td>Machine Learning</td>
+                            <td>PhD — IIT Bombay</td>
+                            <td><a href="mailto:sneha.verma@kec.edu">sneha.verma@kec.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>CSE006</td>
+                            <td>Mr. Nikhil Desai</td>
+                            <td>Assistant Professor</td>
+                            <td>Cloud Computing</td>
+                            <td>M.Tech — Anna University</td>
+                            <td><a href="mailto:nikhil.desai@kec.edu">nikhil.desai@kec.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>CSE007</td>
+                            <td>Ms. Deepali Nair</td>
+                            <td>Lecturer</td>
+                            <td>Data Analytics</td>
+                            <td>B.Tech — VIT</td>
+                            <td><a href="mailto:deepali.nair@kec.edu">deepali.nair@kec.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>CSE008</td>
+                            <td>Dr. Arjun Mishra</td>
+                            <td>Professor</td>
+                            <td>Software Engineering</td>
+                            <td>PhD — IIT Kharagpur</td>
+                            <td><a href="mailto:arjun.mishra@kec.edu">arjun.mishra@kec.edu</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════ MEDIA ══════════════ -->
+    <section class="media-section" id="media">
+        <div class="container">
+            <div class="media-header reveal">
+                <div class="section-label">Department Media</div>
+                <h2 class="section-title">See Us in Action</h2>
+                <p class="section-sub">
+                    Explore our campus, labs and events through our multimedia showcase.
+                </p>
+            </div>
+
+            <div class="media-container">
+
+                <!-- Video Panel -->
+                <div class="video-container reveal">
+                    <h3>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        Campus Highlights
+                    </h3>
+                    <video controls poster="">
+                        <source src="assets/college.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+
+                <!-- Audio Control Panel -->
+                <div class="audio-control-container reveal" style="transition-delay:0.15s">
+                    <h3>🎵 Background Music</h3>
+                    <div class="audio-controls">
+
+                        <div class="music-info">
+                            <span class="music-icon">🎶</span>
+                            <div>
+                                <div class="music-title">Department Ambience Track</div>
+                                <div class="music-sub">SoundHelix — Song 1</div>
+                            </div>
+                        </div>
+
+                        <div class="audio-player">
+                            <button onclick="toggleMusic()" class="control-btn play-btn" id="playBtn">
+                                ▶ Play
+                            </button>
+                            <button onclick="stopMusic()" class="control-btn stop-btn" id="stopBtn">
+                                ⏹ Stop
+                            </button>
+                        </div>
+
+                        <div class="volume-wrapper">
+                            <span class="volume-icon">🔈</span>
+                            <input
+                                type="range"
+                                min="0" max="100" value="50"
+                                oninput="setVolume(this.value)"
+                                class="volume-slider"
+                                id="volumeSlider"
+                                aria-label="Volume"
+                            >
+                            <span class="volume-label" id="volumeLabel">50%</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>CSE Department</h3>
-                    <p>Kings Engineering College, Sriperumbudur</p>
-                    <p>Chennai, Tamil Nadu 603104</p>
+
+                <!-- Brand -->
+                <div>
+                    <div class="footer-brand">
+                        <div class="footer-logo">💻</div>
+                        <div>
+                            <div class="footer-brand-title">CSE Department</div>
+                            <div class="footer-brand-sub">Kings Engineering College</div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Empowering students with cutting-edge computer science education
+                        since 1999. Accredited, industry-linked and research-driven.
+                    </p>
                 </div>
+
+                <!-- Contact -->
                 <div class="footer-section">
                     <h3>Contact</h3>
+                    <p>📍 Sriperumbudur, Tamil Nadu 603104</p>
                     <p>📧 cse@kec.edu</p>
                     <p>📞 +91 44 4749 2000</p>
-                    <p>🌐 www.kec.edu</p>
+                    <p>🌐 www.kec.edu.in</p>
                 </div>
+
+                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#programs">Programs</a></li>
                         <li><a href="#faculty">Faculty</a></li>
                         <li><a href="#media">Media</a></li>
                     </ul>
                 </div>
+
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2024 CSE Department, Kings Engineering College. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sitemap</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Audio/Video Control -->
+    <!-- ══════════════ JAVASCRIPT ══════════════ -->
     <script>
+        /* ── Audio Controls ── */
         const bgMusic = document.getElementById('bgMusic');
         const playBtn = document.getElementById('playBtn');
         let isPlaying = false;
@@ -280,11 +475,11 @@
         function toggleMusic() {
             if (isPlaying) {
                 bgMusic.pause();
-                playBtn.innerHTML = '<span>▶ Play</span>';
+                playBtn.textContent = '▶ Play';
                 isPlaying = false;
             } else {
-                bgMusic.play();
-                playBtn.innerHTML = '<span>⏸ Pause</span>';
+                bgMusic.play().catch(() => {});
+                playBtn.textContent = '⏸ Pause';
                 isPlaying = true;
             }
         }
@@ -292,28 +487,56 @@
         function stopMusic() {
             bgMusic.pause();
             bgMusic.currentTime = 0;
-            playBtn.innerHTML = '<span>▶ Play</span>';
+            playBtn.textContent = '▶ Play';
             isPlaying = false;
         }
 
         function setVolume(value) {
             bgMusic.volume = value / 100;
             document.getElementById('volumeLabel').textContent = value + '%';
+            document.querySelector('.volume-icon').textContent =
+                value == 0 ? '🔇' : value < 40 ? '🔈' : value < 70 ? '🔉' : '🔊';
         }
 
-        // Page load smooth scroll
+        /* ── Smooth scroll ── */
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Set initial volume
+        /* ── Active nav link on scroll ── */
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const active = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.45 });
+
+        sections.forEach(s => observer.observe(s));
+
+        /* ── Scroll reveal ── */
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        /* ── Set initial volume ── */
         setVolume(50);
     </script>
+
 </body>
 </html>
