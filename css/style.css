@@ -50,7 +50,7 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     overflow: hidden;   
-    animation: image-change 5s linear 1 infinite;
+    animation: image-change infinite;
 }
 @keyframes image-change{
     from{
